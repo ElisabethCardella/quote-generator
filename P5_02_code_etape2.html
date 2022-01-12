@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" type="text/css" title="Exemple" href="P5_02_code_etape2.css" />
+    <title> Quote generator </title>
+</head>
+
+<body>
+
+
+    <header class="masthead">
+        <div class="container d-flex h-100 align-items-center">
+            <div class="mx-auto text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Générateur de citations</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">Viens vite créer des citations aléatoires !</h2>
+                <a class="btn btn-primary js-scroll-trigger" href="#choisir">Commencer</a>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-section text-center" id="choisir">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <form onsubmit="submitForm(event)">
+                        <label for="theme">
+                            <h3 class="text-white-50 mx-auto mt-2 mb-5">Choisir un thème de citations : </h3>
+                        </label>
+                        <select class="form-control" id="theme" name="my_html_select_box">
+                            <option value="salutation">Salutations</option>
+                            <option value="activity">Activités</option>
+                        </select>
+
+                        <br><br>
+
+                        <label for="numberOfQuotes">
+                            <h3 class="text-white-50 mx-auto mt-2 mb-5">Choisir le nombre de citations à générer : </h3>
+                        </label>
+                        <select class="form-control" id="number" name="my_html_select_box">
+                            <option value="1"> 1 </option>
+                            <option value="2"> 2 </option>
+                            <option value="3"> 3 </option>
+                            <option value="4"> 4 </option>
+                            <option value="5"> 5 </option>
+                        </select>
+
+                        <br><br>
+
+                        <input type="submit" class="btn btn-primary js-scroll-trigger" id="submit" value="Valider mon choix ">
+                        <input type="button " class="btn btn-primary js-scroll-trigger" id=" restart" value="Réinitaliser " onclick="window.location.reload(false) ">
+                        <input type="button " class="btn btn-primary js-scroll-trigger" onclick="end()" value="Quitter ">
+                    </form>
+                </div>
+            </div>
+
+
+            <br> <br>
+
+            <h4 class="text-white mb-4 ">
+                <div id="quotes"> </div>
+            </h4>
+
+
+            <br> <br>
+        </div>
+    </section>
+
+    <script src="P5_02_code_etape2.js "></script>
+</body>
+
+</html>
